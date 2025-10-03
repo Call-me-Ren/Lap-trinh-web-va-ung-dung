@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITC - Saigon University</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: #f7f9fb; font-family: 'Segoe UI', sans-serif; }
+        .hero { background: #38568b; color: #fff; padding-bottom: 60px; }
+        .navbar-wrapper { background: #38568b; }
+        .navbar { background: transparent !important; }
+        .navbar-nav .nav-link { color: #fff !important; }
+        .btn-primary { background: #4ec3e0; border: none; }
+        .contact-section { background: #fff; margin-top: -60px; border-radius: 10px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); padding: 40px 0; }
+        .contact-title { color: #38568b; font-weight: bold; }
+        .contact-info { border-right: 1px solid #e0e0e0; }
+        .contact-info .icon { font-size: 1.5rem; color: #4ec3e0; margin-right: 10px; }
+        .newsletter { background: #f3f6fa; padding: 40px 0; }
+        .footer { background: #fff; padding: 30px 0 10px 0; border-top: 1px solid #e0e0e0; }
+        .footer .social a { color: #38568b; margin-right: 10px; font-size: 1.2rem; }
+        .rounded-input { border-radius: 30px; }
+        .rounded-btn { border-radius: 30px; }
+        /* Scroll to top button */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            background: #4ec3e0;
+            color: #fff;
+            border: none;
+            outline: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            opacity: 0;
+            visibility: hidden;
+        }
+        #scrollTopBtn.show {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar Full Blue -->
+    <div class="navbar-wrapper w-100">
+        <nav class="navbar navbar-expand-lg hero">
+            <div class="container">
+                <a class="navbar-brand text-white fw-bold" href="#">
+                    <img src="img\logo.png" alt="Logo" width="40" class="me-2">
+                    ITC - SAIGON UNIVERSITY
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Online Course</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Course 1</a></li>
+                                <li><a class="dropdown-item" href="#">Course 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                        <li class="nav-item ms-2">
+                            <a class="btn btn-primary rounded-btn" href="#">Sign up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="fw-bold mb-3">Better for your future!</h1>
+                    <p class="mb-4">Joy is not a destination, but a part of the journey</p>
+                    <a href="#" class="btn btn-primary rounded-btn">Get Started</a>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="img\banner.png" alt="Online Course" class="img-fluid" style="max-height: 320px;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact-section container">
+        <div class="text-center mb-4">
+            <h2 class="contact-title">CONTACT</h2>
+            <hr style="width: 80px; margin: 0 auto; border-top: 3px solid #4ec3e0;">
+            <p class="mt-2">Let us know what you want, and we will serve you well!</p>
+        </div>
+        <div class="row">
+            <div class="col-md-5 contact-info px-4">
+                <div class="mb-3 d-flex align-items-center">
+                    <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                    <div>
+                        <strong>Address</strong><br>
+                        4 Nguyen Trai Street, Ward 3, Dist 5, HCM city
+                    </div>
+                </div>
+                <div class="mb-3 d-flex align-items-center">
+                    <span class="icon"><i class="fas fa-phone"></i></span>
+                    <div>
+                        <strong>Call Us</strong><br>
+                        028 392 44 690
+                    </div>
+                </div>
+                <div class="mb-3 d-flex align-items-center">
+                    <span class="icon"><i class="fas fa-envelope"></i></span>
+                    <div>
+                        <strong>Email Us</strong><br>
+                        ttcontt@sgu.edu.vn
+                    </div>
+                </div>
+                <img src="img\Sgu.png" alt="SGU" class="img-fluid rounded shadow mt-3">
+            </div>
+            <div class="col-md-7 px-4">
+                <form>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <input type="text" class="form-control rounded-input" placeholder="Your Name">
+                        </div>
+                        <div class="col">
+                            <input type="email" class="form-control rounded-input" placeholder="Your Email">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control rounded-input" placeholder="Subject">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control rounded-input" rows="5" placeholder="Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary rounded-btn px-4">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Newsletter -->
+    <section class="newsletter text-center">
+        <div class="container">
+            <h4 class="fw-bold mb-2">Join Our Newsletter</h4>
+            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+            <form class="d-flex justify-content-center mt-3">
+                <input type="email" class="form-control rounded-input w-50 me-2" placeholder="Your email address">
+                <button class="btn btn-primary rounded-btn px-4">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <div class="col-md-3 mb-3">
+                    <h5 class="fw-bold">ITC - SGU</h5>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h6>Useful Links</h6>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h6>Our Services</h6>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h6>Follow Us</h6>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center small">
+                © Copyright: <strong>Information Technology Center</strong> All Rights Reserved<br>
+                Designed by <a href="#" class="text-decoration-none text-primary">Web Design Midterm Test</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Show/hide scroll to top button
+        const scrollBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 200) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        });
+        // Scroll to top when button clicked
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
